@@ -2,10 +2,12 @@
   <mat-drawer-content>
     <header class="header">
       <div class="header--content">
-        <h1>okreads</h1>
+        <h1 aria-label="okreads" tabindex="0">okreads</h1>
         <div>
           <button
             data-testing="toggle-reading-list"
+            aria-label="Reading List"
+            tabindex="1"
             mat-button
             (click)="drawer.toggle()"
           >
