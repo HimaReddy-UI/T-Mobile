@@ -32,12 +32,27 @@ export const removeFromReadingList = createAction(
   props<{ item: ReadingListItem }>()
 );
 
+export const updateReadingList = createAction(
+  '[Reading List] Update from list',
+  props<{ item: ReadingListItem }>()
+);
+
 export const failedRemoveFromReadingList = createAction(
   '[Reading List] Failed remove from list',
   props<{ item: ReadingListItem }>()
 );
 
+export const failedUpdateReadingList = createAction(
+  '[Reading List] Failed remove from list',
+  props<{ item: ReadingListItem }>()
+);
+
 export const confirmedRemoveFromReadingList = createAction(
+  '[Reading List] Confirmed remove from list',
+  props<{ item: ReadingListItem }>()
+);
+
+export const confirmedUpdateReadingList = createAction(
   '[Reading List] Confirmed remove from list',
   props<{ item: ReadingListItem }>()
 );
