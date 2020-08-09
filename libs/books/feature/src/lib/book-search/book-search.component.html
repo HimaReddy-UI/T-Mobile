@@ -7,7 +7,7 @@
       placeholder="Search for books to add to your reading list"
       aria-label="Search for books to add to your reading list"
       tabindex="0"
-      formControlName="term"
+      formControlName="term" 
     />
     <button mat-icon-button matSuffix>
       <mat-icon>search</mat-icon>
@@ -35,12 +35,25 @@
           <div>
             <button
               mat-flat-button
+              class="want-to-read"
               color="primary"
               (click)="addBookToReadingList(b)"
-              [disabled]="b.isAdded"
+              *ngIf = "!b.isAdded"
+              aria-label="want to read"
             >
               Want to Read
             </button>
+            <button
+              mat-flat-button
+              class="want-to-delete"
+              color="warn"
+              (click)="removeFromReadingList(b)"
+              aria-label="want to delete"
+              *ngIf = "b.isAdded"
+            >
+              Want to Delete
+            </button>
+            
           </div>
         </div>
       </div>
